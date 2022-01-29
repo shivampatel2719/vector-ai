@@ -1,3 +1,4 @@
+itsdangerous==2.0.1
 alembic==1.7.5
 anyio==3.5.0
 asgiref==3.4.1
@@ -13,5 +14,4 @@ python-dotenv==0.19.2
 SQLAlchemy==1.4.31
 sqlparse==0.4.1
 starlette==0.17.1
-itsdangerous==2.0.1
 uvicorn
