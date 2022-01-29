@@ -98,3 +98,10 @@ Run this command to run the App
 ```sh
   docker-compose up
   ```
+
+## NOTE :
+- From some machines, FastAPI throws error when run in docker. In this case, simply go to back-end file and hit command !
+
+```sh
+  uvicorn main:app --reload --port 6969
+  ```
