@@ -69,3 +69,14 @@ def delete_card(id: int,db: Session = Depends(get_db)):
             "success": False,
             "Error":e
         }
+
+@router.post('/{id}')
+def update_card(id: int,details: CardRequest, db: Session = Depends(get_db)):
+    try:
+        db.query(Card).filter(Card.id == id).update(details)
+        db.commit()
+    except Exception as e:
+        return {
+            "success": False,
+            "Error":e
+        }

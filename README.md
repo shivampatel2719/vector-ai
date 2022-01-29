@@ -105,3 +105,16 @@ Run this command to run the App
 ```sh
   uvicorn main:app --reload --port 6969
   ```
+
+## General Questions: 
+
+1) Design the hypothetical API for this project if you had to allow for adding, removing and updating the elements. Consider long-term maintenance as well.
+
+- Desgined in backend.
+
+2) How would you allow multiple users to edit this board in real time?
+
+- We can use node.js and socket.io for real time data transfer between all the users on the board.
+- As one user can move one card at a time, we need to implement kind of locking system, i.e, If someone is dragging a card, other users can't.
+- Using websockets, we can transfer states and move cards accordingly.
+- We can also use Firebase instead of socket.io, it would be easier to handle data concurrency and synchronization as firebase would manage it.
